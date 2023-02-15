@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Couleur de fond de la piste */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur de la poignée */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur de la poignée au survol */
+}
+
