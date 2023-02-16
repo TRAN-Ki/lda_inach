@@ -1,50 +1,54 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import "./form.css";
 import * as events from "events";
 
 
+class Form extends React.Component{
 
-function Form(props) {
-    //state
-    const [message, setMessage] = useState("vqfv") ;
-
-    //comportement
-
-    const handelchandge = events => {
-        console.log("uhukb")
+    state = {
+        nom : "",
+        email : "",
+        message : "",
     }
 
-    const HandleSubmit = (events) => {
-        events.preventDefault()
-        alert("ton pere le fdp")
-        console.log();
+    HandleSubmit = events =>{
+        //alert(this.state.email)
+        //alert(this.state.nom)
+        //alert(this.state.message)
+    };
+    handelchandge = events =>{
+        this.setState({[events.target.name]: events.target.value})
+    };
+
+    render()
+    {
+        return(
+            <main>
+                <form action="submit" onSubmit={this.HandleSubmit} >
+                    <div className="card">
+                        <h3>Formulaire</h3>
+                        <span>Nom complet :</span>
+                        <input type="text" name="nom" onChange={this.handelchandge}/>
+                        <span>Email :</span>
+                        <input type="text" name="email" onChange={this.handelchandge} />
+                        <span>Message :</span>
+                        <input type="text" name="message" onChange={this.handelchandge}/>
+                        <span>Service :</span>
+                        <select>
+                            <option>S.A.V</option>
+                            <option>Demande de devis</option>
+                            <option>Postuler</option>
+                            <option id="idAutre" value="autre">Autre</option>
+                        </select>
+                        <input type="text" id="name" name="autre" hidden/>
+                        <p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p><p>  iuiuibikhnuin</p>
+                        <button className="enter" type="submit">Envoyer</button>
+                    </div>
+                </form>
+            </main>
+        )
     }
 
-    //affichage
-    return (
-        <main>
-            <form action="submit" onSubmit={HandleSubmit} >
-                <div className="card">
-                    <h3>Formulaire</h3>
-                    <span>Nom complet :</span>
-                    <input value={message} type="text" name="name" onChange={handelchandge}/>
-                    <span>Email :</span>
-                    <input type="text" name="email" />
-                    <span>Message :</span>
-                    <input type="text" name="message" />
-                    <span>Service :</span>
-                    <select>
-                        <option>S.A.V</option>
-                        <option>Demande de devis</option>
-                        <option>Postuler</option>
-                        <option id="idAutre" value="autre">Autre</option>
-                    </select>
-                    <input type="text" id="name" name="autre" hidden/>
-                    <button className="enter">Valide ta mere</button>
-                </div>
-            </form>
-        </main>
-    );
 }
 
 /**
