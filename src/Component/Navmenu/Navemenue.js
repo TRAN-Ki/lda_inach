@@ -5,8 +5,6 @@ import Service from "../../Page/Service";
 import "./navmenue.css"
 import Presentation from "../../Page/Presentation";
 
-
-
 function Navemenue(props) {
     return (
         <header>
