@@ -1,9 +1,11 @@
 import React from 'react';
 import {Routes, Route, NavLink} from "react-router-dom";
-import Accueil from "../Page/Accueil";
-import Service from "../Page/Service";
+import Accueil from "../../Page/Accueil";
+import Service from "../../Page/Service";
 import "./navmenue.css"
-import Presentation from "../Page/Presentation";
+import Presentation from "../../Page/Presentation";
+
+
 
 function Navemenue(props) {
     return (

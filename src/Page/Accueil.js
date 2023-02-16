@@ -1,12 +1,17 @@
 import React from 'react';
-import Hero from "../Component/Hero";
+import Hero from "../Component/Hero/Hero";
+import About from "../Component/About/About";
+import Form from "../Component/Form/Form";
+
 
 function Accueil(props) {
 
     return (
-        <div className="accueil">
-            <Hero />
-        </div>
+        <main className="accueil">
+            <Hero/>
+            <About />
+                <Form />
+        </main>
     );
 }
 

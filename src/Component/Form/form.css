@@ -1,0 +1,36 @@
+.card {
+    margin: auto;
+    align-items: center;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e8e8e8;
+    box-shadow: 2px 2px 10px #ccc;
+}
+
+h3, span {
+    margin-top: 10px;
+    color: #1190C0;
+}
+
+input, select {
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    border: none;
+    margin-top: 7px;
+}
+
+input:hover, select:hover, button:hover {
+    background-color: #1190C0;
+}
+
+button {
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-top: 30px;
+    border: 1px gray solid;
+}
+
