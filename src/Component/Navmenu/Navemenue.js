@@ -11,15 +11,18 @@ function Navemenue(props) {
     return (
         <header>
             <div>
-            <nav className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <NavLink className= 'nav-img d-flex align-items-center' to='/'><img src={require('../Assets/logo-inach.png')} /></NavLink>
-                <ul>
-                    <li><NavLink className= 'nav-items' to='/'>Accueil</NavLink></li>
-                    <li><NavLink className= 'nav-items' to='/service'>Services</NavLink></li>
-                    <li><NavLink className= 'nav-items' to='/presentation'>Qui sommes-nous</NavLink></li>
-                    <li><button> Faire un devis</button></li>
-                </ul>
-
+            <nav className="nav-bar navbar navbar-expand-lg">
+                <div className="container-fluid">
+                    <NavLink className= 'ms-3 nav-img d-flex align-items-center' to='/'><img src={require('../../Assets/logo-inach.png')} /></NavLink>
+                    <div className="me-5">
+                        <ul className='navbar-nav me-auto mb-2 mb-lg-0 justify-content-right'>
+                            <li className="nav-item"><NavLink className='nav-items' to='/'>Accueil</NavLink></li>
+                            <li className="nav-item"><NavLink className='nav-items' to='/service'>Services</NavLink></li>
+                            <li className="nav-item"><NavLink className='nav-items' to='/presentation'>Qui sommes-nous</NavLink></li>
+                            <li className="nav-item"><NavLink className='nav-items contact' to='/contact'>Faire un devis</NavLink></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
             </div>
             <Routes>
@@ -28,6 +31,7 @@ function Navemenue(props) {
                 <Route path="/presentation" element={<Presentation/>}/>
             </Routes>
         </header>
+
     );
 }
 

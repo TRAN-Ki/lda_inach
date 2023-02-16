@@ -1,0 +1,36 @@
+.nav-bar{
+    position: sticky; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    padding: 0;
+    z-index: 9999;
+    background-color: white;
+}
+
+li {
+    list-style: none;
+    display: inline;
+    vertical-align: middle;
+}
+
+.nav-items {
+    color: black;
+    padding: 25px;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav-img > img{
+    max-width: 50%;
+    padding: 8px;
+}
+
+.contact {
+    padding: 10px 23px;
+    margin-left: 20px;
+    border-radius: 20px;
+    background-color: lightskyblue;
+    color: white;
+}
+
+
